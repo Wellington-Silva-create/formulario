@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título da página</title>
+    <style>
+        *{
+            font-family:serif;
+            margin:0;
+            padding:0;
+        }
+        body{
+            position:relative;
+            
+            background:#7c93f777;
+            color:white;
+            
+            height:100vh;
+        }
+        h1{
+            text-align:center;
+            text-shadow:2px 2px 0px black;
+            padding-top: 20px;
+        }
+        form{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            background-color:white;
+            padding:20px;
+            width:300px;
+            height:300px;
+            color: black;
+            border-radius: 20px;
+            box-shadow: 0px 0px 8px gray;
+        }
+        form div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+        }
+        p{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Preencha esse formulário</h1>
+    <form action="pag.js" method="POST" autocomplete="on">
+        <div>
+        <p>
+            <label for="inome">Seu nome:</label>
+            <input type="text" name="nome" id="inome" autocomplete="name" autofocus required placeholder="Digite seu nome:" oninput="seuN.innerHTML = inome.value">
+        </p>
+        <p>
+            <output name="seu_nome" id="seuN">:</output>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Excluir">
+        </p>
+        </div>
+    </form>
+</body>
+</html>
